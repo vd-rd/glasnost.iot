@@ -11,6 +11,7 @@ Decisions that apply across Glasnost boards. Reviewers: don't re-propose these; 
 - Shared Glasnost header pinout: ACIN is wired when the board has a power path — a power-path PMIC or a discrete one (e.g. diode/MOSFET OR-ing of USB and ACIN); otherwise it's a placeholder. Header signals that exist only on some SoC variants of a family board are wired, not placeholders, and are named after the actual peripheral instance (e.g. `CAN1_TX`, not `CAN0`), with the per-variant function documented. Unused standard labels (CAN, GPIOA, …) stay as placeholders with a "not connected on this board" note. No written spec yet (to be built later); until then the existing boards' header pinouts are considered correct — check new boards for consistency with them, don't flag the pinout itself.
 - Copper joints are real tracks/vias into pad centres, never tangent or marginal overlaps.
 - No fiducials required; don't flag missing fiducials.
+- I²C pull-ups are fitted on the board (not left to add-ons): **1.8 kΩ** to the I/O rail, or stronger if the bus load needs it (TI I²C pull-up app note: ≈1.6 mA at 3.3 V, fast-mode rise time up to ~200 pF).
 - New optional parts (pull-ups, termination, filters) may be added as DNP / 0 Ω footprints and tuned after bring-up.
 
 ## Naming convention
