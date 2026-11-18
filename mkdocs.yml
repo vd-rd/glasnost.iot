@@ -1,0 +1,37 @@
+site_name: Glasnost
+site_url: https://vd-rd.github.io/glasnost.iot
+repo_url: https://github.com/vd-rd/glasnost.iot
+repo_name: vd-rd/glasnost.iot
+theme:
+  name: material
+  palette:
+    primary: lime
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.indexes
+plugins:
+  - search
+  - blog:
+      blog_dir: journal
+      categories_allowed:
+        - review
+        - bring-up
+        - fab
+        - tooling
+        - software
+        - process
+
+nav:
+  - Home: index.md
+  - Catalogue: catalogue/index.md
+  - Standards: standards/index.md
+  - Design review:
+    - review/README.md
+    - Process: review/process.md
+    - Checklist: review/checklist.md
+    - House rules: review/house-rules.md
+    - References: review/references.md
+    - Tooling: review/tooling.md
+  - Journal:
+    - journal/index.md
