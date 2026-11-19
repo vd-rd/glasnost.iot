@@ -26,6 +26,8 @@ nav:
   - Home: index.md
   - Catalogue: catalogue/index.md
   - Standards: standards/index.md
+  - Style guide: style-guide.md
+  - Glossary: glossary.md
   - Design review:
     - review/README.md
     - Process: review/process.md
